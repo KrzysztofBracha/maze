@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: arial, sans-serif;
+  background-color: #ccc;
+}
+
+header {
+  text-align: center;
+  font-size: 3rem;
+  background-color: aquamarine;
+  line-height: 80px;
+  height: 80px;
+}
+
+section {
+  margin: 0 auto;
+  width: 50%;
+  min-width: 320px;
+  background-color: skyblue;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 10px 0;
+
+  &#maze {
+    padding: 25px 0 25px 0;
+    margin: 10px auto 10px auto;
+  
+    table {
+      width: 25vw;
+      height: 25vw;
+      min-width: 300px;
+      min-height: 300px;
+      border-spacing: 0px;
+      margin: 0 auto;
+    
+      td {
+        border: 1px solid black;
+        width: 10%;
+        height: 10%;
+        background-image: url(../img/wall.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      
+        &:hover {
+          opacity: 0.5;
+        }
+
+        &.end_td {
+          position: relative;
+        }
+
+        &.start_td {
+          position: relative;
+        }
+
+        span#start {
+          position: absolute;
+          left: -2px;
+          top: 35px;
+          font-weight: bold;
+        }
+        
+        span#end {
+          position: absolute;
+          left: 0;
+          bottom: 35px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+button {
+  border-color: dodgerblue;
+  padding: 0 15px;
+  height: 35px;
+  line-height: 35px;
+  font-weight: bold;
+  border-radius: 3px;
+  box-shadow: 2px 2px;
+  margin-right: 5px;
+  letter-spacing: 1.5px;
+  background-color: cornflowerblue;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    outline: none;
+    border: none;
+  }
+
+  &.btn-active:hover {
+    background-color: royalblue;
+  }
+
+  &.btn-clicked {
+    border-top: 2px solid cadetblue;
+    border-left: 2px solid cadetblue;
+    box-shadow: 1px 1px;
+    color: darkslategray;
+  }
+}
+
+
